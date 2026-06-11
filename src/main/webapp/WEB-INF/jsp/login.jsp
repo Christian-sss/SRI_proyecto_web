@@ -311,7 +311,7 @@
                  data-client_id="571504675373-b3dthv13b7i5khpi4p4dvnq09icbfe4n.apps.googleusercontent.com"
                  data-context="signin"
                  data-ux_mode="popup"
-                 data-login_uri="https://sriproyectoweb-production.up.railway.app/login/google"
+                 data-login_uri="https://sriproyectoweb-production.up.railway.app/dashboard"
                  data-auto_prompt="false">
             </div>
 
