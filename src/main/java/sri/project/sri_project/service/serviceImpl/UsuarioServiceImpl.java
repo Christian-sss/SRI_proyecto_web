@@ -59,9 +59,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public User ejecutar(String username, String passwordIngresada) {
+    public User ejecutar(String email, String passwordIngresada) {
         User user = usuarioRepository
-                .findByEmailOrNombre(username, username)
+                .findByEmail(email)
                 .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado."));
 
         if (!passwordIngresada.equals(user.getPasswordHash())) {
