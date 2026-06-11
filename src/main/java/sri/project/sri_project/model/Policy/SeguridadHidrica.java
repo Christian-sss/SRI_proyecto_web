@@ -19,11 +19,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class SeguridadHidrica  {
 
-
-    public boolean puedeRegar(TanqueAgua tanque) {
-        return tanque.hayAgua() && tanque.getHumedad() < TanqueAgua.HUMEDAD_MINIMA;
-    }
-
     public void evaluarEstado(TanqueAgua tanque) {
 
         if (!tanque.hayAgua()) {

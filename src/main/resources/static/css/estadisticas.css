@@ -1,0 +1,154 @@
+.analytics-dashboard {
+    background: #f8fafc;
+}
+
+.industrial-kpi,
+.industrial-chart-card {
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.industrial-kpi {
+    min-height: 128px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+}
+
+.kpi-icon {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.kpi-icon.tank {
+    background: #2563eb;
+}
+
+.kpi-icon.moisture {
+    background: #168aad;
+}
+
+.kpi-icon.crop {
+    background: #16a34a;
+}
+
+.kpi-icon.irrigation {
+    background: #f59e0b;
+}
+
+.kpi-copy {
+    min-width: 0;
+}
+
+.kpi-copy span,
+.chart-heading p {
+    color: #64748b;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.kpi-copy strong {
+    display: block;
+    margin-top: 4px;
+    color: #0f172a;
+    font-size: clamp(1.25rem, 2vw, 1.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.kpi-copy small {
+    display: block;
+    margin-top: 4px;
+    color: #748094;
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.industrial-chart-card {
+    padding: 20px;
+}
+
+.chart-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.chart-heading h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.chart-heading p {
+    margin: 5px 0 0;
+}
+
+.chart-state {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #bbf7d0;
+    border-radius: 999px;
+    background: #f0fdf4;
+    color: #15803d;
+    padding: 7px 12px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.chart-state i {
+    font-size: 0.55rem;
+}
+
+.chart-frame {
+    position: relative;
+    height: 390px;
+    min-height: 320px;
+}
+
+.chart-frame.donut {
+    height: 390px;
+}
+
+.chart-frame.water-consumption-chart {
+    height: 360px;
+}
+
+.consumption-table thead th {
+    border-bottom-width: 1px;
+    color: #475569;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.consumption-table tbody td {
+    color: #334155;
+}
+
+@media (max-width: 768px) {
+    .chart-heading {
+        flex-direction: column;
+    }
+
+    .chart-frame,
+    .chart-frame.donut {
+        height: 300px;
+    }
+}

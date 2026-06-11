@@ -14,9 +14,6 @@ public class TanqueAgua {
     private double distancia;
     private boolean bombaActiva;
 
-    private int humedadAlIniciarManual = 0;
-
-
     public static final int HUMEDAD_MINIMA = 30;
     private static final double UMBRAL_LLENO = 7.0;
     private static final double UMBRAL_VACIO = 18.0;
@@ -30,22 +27,11 @@ public class TanqueAgua {
 
 
 
-    public void recordarHumedadInicial() {
-        this.humedadAlIniciarManual = this.humedad;
-    }
-
-    public int getHumedadAlIniciarManual() {
-        return humedad;
-    }
-
-
     public boolean hayAgua() {
         return distancia < UMBRAL_VACIO;
     }
 
-    public boolean estaLleno() {
-        return distancia <= UMBRAL_LLENO;
-    }
+
 
 
 
@@ -75,14 +61,6 @@ public class TanqueAgua {
     public void detenerRiego() {
         bombaActiva = false;
         estadoActual = EstadoSistema.ESPERA;
-    }
-
-    public void evaluarEstado() {
-
-        if (!hayAgua()) {
-            estadoActual = EstadoSistema.BLOQUEADO_SIN_AGUA;
-            bombaActiva = false;
-        }
     }
 
 

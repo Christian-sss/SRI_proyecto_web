@@ -1,0 +1,144 @@
+.riego-control-card {
+    border: 1px solid #deedd7;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fffefa;
+}
+
+.riego-control-card .card-header {
+    border-bottom: 1px solid #e2efdc;
+    background: linear-gradient(135deg, #f7fcf4, #edf8e8);
+    padding: 22px;
+}
+
+.riego-control-card h3 {
+    margin: 0;
+    color: #2e6b2a;
+    font-size: 1.18rem;
+    font-weight: 800;
+}
+
+.riego-control-card p {
+    margin: 6px 0 0;
+    color: #80a076;
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.section-label {
+    display: block;
+    color: #49663f;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.operation-mode {
+    display: grid;
+    place-items: center;
+}
+
+.mode-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.form-switch-xl .form-check-input {
+    width: 5.6rem;
+    height: 2.8rem;
+    cursor: pointer;
+    border-color: #b8d8ad;
+    background-color: #dfe7dc;
+}
+
+.form-switch-xl .form-check-input:checked {
+    border-color: #2f7d32;
+    background-color: #2f7d32;
+}
+
+.mode-caption,
+.mode-status {
+    font-weight: 800;
+}
+
+.mode-caption {
+    color: #7d9674;
+}
+
+.mode-status {
+    min-width: 118px;
+    border-radius: 999px;
+    padding: 9px 14px;
+    text-align: center;
+}
+
+.mode-status.manual {
+    background: #eaf6e6;
+    color: #2e6b2a;
+}
+
+.mode-status.automatico {
+    background: #dff0ff;
+    color: #1967a3;
+}
+
+.manual-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.manual-actions .btn {
+    min-width: 210px;
+    min-height: 56px;
+    border-radius: 18px;
+    font-weight: 800;
+}
+
+.manual-actions .btn:disabled {
+    border-color: #cbd6c6;
+    background: #d8ded5;
+    color: #7d8b78;
+}
+
+.profile-selector {
+    max-width: 520px;
+    margin-inline: auto;
+}
+
+.profile-select {
+    min-height: 48px;
+    border: 1px solid #cfe3c5;
+    border-radius: 16px;
+    background-color: #fbfef9;
+    color: #17351d;
+    font-weight: 700;
+}
+
+.profile-help {
+    display: block;
+    margin-top: 8px;
+    color: #6f8a66;
+    font-weight: 700;
+    text-align: center;
+}
+
+.schedule-input {
+    min-height: 48px;
+    border: 1px solid #cfe3c5;
+    border-radius: 16px;
+    background-color: #fbfef9;
+    color: #17351d;
+    font-weight: 800;
+}
+
+.schedule-button {
+    min-height: 48px;
+    border-radius: 16px;
+    font-weight: 800;
+}

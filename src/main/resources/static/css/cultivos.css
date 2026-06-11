@@ -1,0 +1,108 @@
+.search-box {
+    max-width: 360px;
+}
+
+.search-box .form-control,
+.search-box .input-group-text {
+    border-color: #cfe3c5;
+    border-radius: 16px;
+    background: #fbfef9;
+    color: #53764b;
+    font-weight: 700;
+}
+
+.btn-new-profile {
+    min-height: 44px;
+    border-radius: 15px;
+    font-weight: 800;
+    box-shadow: 0 14px 26px rgba(47, 125, 50, 0.18);
+}
+
+.cultivo-grid-card {
+    border-top: 1px solid #deedd7;
+    border-right: 1px solid #deedd7;
+    border-bottom: 1px solid #deedd7;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cultivo-grid-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(38, 83, 42, 0.1) !important;
+}
+
+.cultivo-title {
+    color: var(--green-900);
+    font-weight: 800;
+}
+
+.cultivo-detail {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 10px;
+    color: #49663f;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.cultivo-notes {
+    margin: 14px 0 0;
+    color: #60785a;
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.cultivo-grid-card .card-footer .btn {
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.cultivo-modal {
+    border: 1px solid #deedd7;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.cultivo-modal .modal-header {
+    background: linear-gradient(135deg, #f7fcf4, #edf8e8);
+    border-bottom: 1px solid #e2efdc;
+}
+
+.cultivo-modal .modal-title {
+    color: #2e6b2a;
+    font-weight: 800;
+}
+
+.cultivo-modal .form-label {
+    color: #3d6138;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.cultivo-modal .form-control {
+    border: 1px solid #cfe3c5;
+    border-radius: 15px;
+    background: #fbfef9;
+    color: var(--green-900);
+    font-weight: 600;
+}
+
+.empty-state {
+    display: grid;
+    place-items: center;
+    min-height: 240px;
+    border: 1px dashed #bfdab5;
+    border-radius: 18px;
+    background: #fbfef9;
+    color: #6e8b65;
+    text-align: center;
+    padding: 28px;
+}
+
+.empty-state i {
+    color: var(--green-700);
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
