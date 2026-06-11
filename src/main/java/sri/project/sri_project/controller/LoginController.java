@@ -97,7 +97,7 @@ public class LoginController {
             session.setAttribute("usuarioLogueado", usuario);
             return "redirect:/dashboard";
         } catch (Exception e) {
-            e.printStackTrace(); // Para que también se vea en consola
+            e.printStackTrace();
             String mensajeDetalle = e.getCause() != null ? e.getCause().getMessage() : e.getMessage();
             model.addAttribute("error", "Error autenticando con Google: " + mensajeDetalle);
             prepararCaptcha(model, session);

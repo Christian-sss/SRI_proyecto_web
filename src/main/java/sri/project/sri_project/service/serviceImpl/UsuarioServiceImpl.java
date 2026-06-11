@@ -30,15 +30,14 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new IllegalArgumentException("El correo ya está registrado.");
         }
         
-        // 1. Guardar en sri_stats_db.usuarios
+
         User newUser = new User();
         newUser.setEmail(email);
-        newUser.setNombre(email.split("@")[0]); // Asignar la primera parte del correo como nombre provisional
-        newUser.setPasswordHash(password); // Se guarda en texto plano o hash según lógica
+        newUser.setNombre(email.split("@")[0]);
+        newUser.setPasswordHash(password);
         newUser.setPictureUrl("");
         User savedUser = usuarioRepository.save(newUser);
         
-        // 2. Guardar en sisintupt.usuario_auth como solicitó el usuario
         try {
             jdbcTemplate.update("INSERT IGNORE INTO sisintupt.usuario_auth (CorreoU) VALUES (?)", email);
         } catch (Exception e) {
@@ -46,7 +45,7 @@ public class UsuarioServiceImpl implements UsuarioService {
             System.err.println("Aviso: No se pudo insertar en sisintupt.usuario_auth. Asegúrate de que la base de datos existe.");
         }
         
-        // 3. Enviar correo de registro
+
         new Thread(() -> {
             try {
                 emailService.enviarCorreoRegistro(email, newUser.getNombre());
@@ -99,15 +98,12 @@ public class UsuarioServiceImpl implements UsuarioService {
                     return usuarioRepository.save(newUser);
                 });
                 
-                // Asegurarse de insertar en la tabla secundaria sisintupt.usuario_auth siempre
+
                 try {
-                    // Verificamos si existe antes para no causar excepciones innecesarias, o usamos INSERT IGNORE
                     jdbcTemplate.update("INSERT IGNORE INTO sisintupt.usuario_auth (CorreoU) VALUES (?)", email);
                 } catch (Exception e) {
-                    // Ignorar error si ya existe o hay otro problema menor
                 }
                 
-                // Enviar correo dependiendo de si es login o registro
                 new Thread(() -> {
                     try {
                         if (isNewUser) {
